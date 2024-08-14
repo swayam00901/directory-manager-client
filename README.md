@@ -1,11 +1,11 @@
-# Getting Started with Create React App
+# Directory Manager Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a directory management client built with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
-
+### `yarn`
 ### `yarn start`
 
 Runs the app in the development mode.\
@@ -21,26 +21,36 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `public/`: Contains the public assets for the application.
+    - `index.html`: The main HTML file.
+    - `manifest.json`: The web app manifest.
+    - `robots.txt`: The robots.txt file.
+- `src/`: Contains the source code for the application.
+    - `App.css`: The main CSS file for the App component.
+    - `App.test.tsx`: The test file for the App component.
+    - `App.tsx`: The main App component.
+    - `index.css`: The global CSS file.
+    - `index.tsx`: The main entry point for the React application.
+    - `react-app-env.d.ts`: TypeScript environment definitions.
+    - `reportWebVitals.ts`: Performance measuring utilities.
+    - `services/`: Contains the API service files.
+        - `api.ts`: API service functions like `createDirectory`, `deleteDirectory`, and `moveDirectory`.
+    - `setupTests.ts`: Test setup file.
+- `.gitignore`: Specifies files and directories to be ignored by Git.
+- `package.json`: Contains the project dependencies and scripts.
+- `tsconfig.json`: TypeScript configuration file.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## API Services
 
-### `yarn eject`
+The project includes API service functions located in [`src/services/api.ts`](src/services/api.ts):
+- [`createDirectory`](src/services/api.ts)
+- [`deleteDirectory`](src/services/api.ts)
+- [`moveDirectory`](src/services/api.ts)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Output Example
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Here is an example of the output:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Output Example](Output.JPG)
